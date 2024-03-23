@@ -1,0 +1,122 @@
+@import url('https://fonts.googleapis.com/css2?family=Overpass:ital,wght@0,100..900;1,100..900&display=swap');
+
+:root {
+  --orange: #fb7413;
+  --white: hsl(0, 0%, 100%);
+  --light-grey: hsl(217, 12%, 63%);
+  --medium-grey: hsl(216, 12%, 54%);
+  --dark-blue: hsl(213, 19%, 18%);
+  --very-dark-blue: hsl(216, 12%, 8%);
+  --opacity-bg: hsl(216, 12%, 54%, 0.2);
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Overpass", sans-serif;
+}
+
+body {
+  display: grid;
+  place-items: center;
+  width: 100%;
+  min-height: 100vh;
+  background-color: var(--very-dark-blue);
+  color: var(--white);
+}
+
+.container {
+  background-color: var(--dark-blue);
+  max-width: 400px;
+  padding: 25px;
+  border-radius: 15px;
+}
+
+.icon {
+  content: url(./images/icon-star.svg);
+  background-color: var(--opacity-bg);
+  padding: 10px;
+  border-radius: 50%;
+  margin-bottom: 25px;
+}
+
+p {
+  color: var(--light-grey);
+  margin-top: 20px;
+}
+
+ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin: 25px 0;
+  list-style: none;
+}
+
+.btn-rating {
+  border: none;
+  color: var(--light-grey);
+  width: 40px;
+  height: 40px;
+  background-color: var(--opacity-bg);
+  text-align: center;
+  vertical-align: middle;
+  line-height: 40px;
+  border-radius: 9999px;
+  cursor: pointer;
+  font-weight: 700;
+}
+
+.btn-rating:hover {
+  background-color: var(--orange);
+  color: var(--white);
+}
+
+.btn-rating-active {
+  background-color: var(--light-grey);
+  color: var(--white);
+}
+
+.btn-submit {
+  width: 100%;
+  background-color: var(--orange);
+  color: var(--white);
+  border: none;
+  padding: 15px;
+  letter-spacing: 7px;
+  font-weight: 700;
+  border-radius: 30px;
+  cursor: pointer;
+  transition-duration: 0.75s;
+}
+
+.btn-submit:hover {
+  background-color: var(--white);
+  color: var(--orange);
+}
+.last-step {
+  text-align: center;
+}
+.hidden {
+  display: none;
+}
+.your-select {
+  background-color: var(--opacity-bg);
+  width: fit-content;
+  margin: 25px auto;
+  color: var(--orange);
+  padding: 7px 12px;
+  font-size: 0.9rem;
+  border-radius: 20px;
+}
+.invalid-submit {
+  display: none;
+  color: var(--orange);
+  text-align: center;
+  width: 100%;
+  margin-bottom: 10px;
+}
+.invalid-submit--active {
+  display: block;
+}
